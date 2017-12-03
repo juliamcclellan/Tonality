@@ -41,7 +41,7 @@ class gui(tkinter.Tk):
         pass
 
     def textAnalyze(self):
-        analysis = analyze(str(self.entryVariable))
+        analysis = analyze(self.entryVariable).get())
         print(json.dumps(analysis, indent=2))
         #self.label.tag_delete('txt')
 
