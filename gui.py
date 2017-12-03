@@ -42,7 +42,7 @@ class gui(tkinter.Tk):
 
     def textAnalyze(self):
         analysis = analyze(str(self.entryVariable))
-        print(analysis)
+        print(json.dumps(analysis, indent=2))
         #self.label.tag_delete('txt')
 
         #self.label.insert(tkinter.INSERT, analysis)
