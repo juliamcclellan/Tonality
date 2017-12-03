@@ -1,3 +1,5 @@
+import json
+
 from file_processor import open_file
 from audio_parse import parse_audio
 from watson import analyze
@@ -7,5 +9,4 @@ parsed = parse_audio(audio)
 
 for result in parsed:
     tone = analyze(result.alternatives[0].transcript)
-    for line in tone:
-        print(line)
+    print(json.dumps(tone, indent=2))
