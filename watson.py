@@ -11,6 +11,6 @@ tone_analyzer = ToneAnalyzerV3(
 
 def analyze(text):
     tone = tone_analyzer.tone(text, tones='emotion', content_type='text/plain')
-    print(json.dumps(tone, indent=2))
+    #print(json.dumps(tone, indent=2))
 
 analyze("the weather has been so dreary lately")
